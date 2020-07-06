@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mylayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/animationcolor"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+
+        android:weightSum="1"
+        tools:layout_editor_absoluteX="-24dp"
+        tools:layout_editor_absoluteY="4dp">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="240dp"
+            android:layout_height="241dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/skintech"
+            android:contentDescription="TODO" />
+
+        <TextView
+            android:layout_width="349dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="1dp"
+            android:layout_weight="0.30"
+            android:gravity="center_horizontal"
+            android:text="Skin care is important, it's your life, take action today!"
+            android:textAlignment="center"
+            android:textColor="#1E1B1B"
+            android:textSize="20dp"
+            android:textStyle="bold|italic"
+            android:visibility="visible" />
+
+        <EditText
+            android:id="@+id/UsernameText"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="50dp"
+            android:autofillHints=""
+            android:background="@drawable/roundedobj"
+            android:gravity="center_horizontal"
+            android:hint="Enter username"
+            android:inputType="text"
+            android:textAlignment="center" />
+
+        <EditText
+            android:id="@+id/PasswordText"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:autofillHints=""
+            android:background="@drawable/roundedobj"
+            android:ems="10"
+            android:gravity="center_horizontal"
+            android:hint="Enter password"
+            android:inputType="text"
+            android:textAlignment="center" />
+
+
+        <Button
+            android:id="@+id/LoginButton"
+            android:layout_width="178dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="1dp"
+            android:background="@drawable/buttonobj"
+            android:gravity="center"
+            android:onClick="LoginButton"
+            android:text="Sign In"
+            android:textColor="#FFFFFF" />
+
+
+
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
