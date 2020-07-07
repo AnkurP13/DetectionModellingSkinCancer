@@ -9,4 +9,8 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="google_map_key">AIzaSyCdi_LaxLP0klZ1wRkafRpYTI0YNp000ck</string>
+    <string name="googlemapkey">AIzaSyDtbSBh0XzWOSO1H2jLxTz39jRKNchy_iQ</string>
+    <string name="places">AIzaSyDtbSBh0XzWOSO1H2jLxTz39jRKNchy_iQ</string>
+    <string name="notmyapi">AIzaSyB_qsP8AOP_P0MdlPz-48TDaJYjTP3vbjo</string>
 </resources>

@@ -6,28 +6,33 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".Map">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:padding="8dp"
-        
+        android:padding="8dp">
+
         <Spinner
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            app:layout_constraintHorizontal_weight="1"
+            android:layout_weight="1"
             android:id="@+id/sp_type"/>
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/bt_find"
             android:text="Find"/>
+
     </LinearLayout>
 
     <fragment
-    android:layout_width="match_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/google_map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"/>
 
 
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
