@@ -13,4 +13,6 @@
     <string name="googlemapkey">AIzaSyDtbSBh0XzWOSO1H2jLxTz39jRKNchy_iQ</string>
     <string name="places">AIzaSyDtbSBh0XzWOSO1H2jLxTz39jRKNchy_iQ</string>
     <string name="notmyapi">AIzaSyB_qsP8AOP_P0MdlPz-48TDaJYjTP3vbjo</string>
+    <string name="google_maps_key">AIzaSyDtbSBh0XzWOSO1H2jLxTz39jRKNchy_iQ</string>
+    <string name="hospitals">Hospitals</string>
 </resources>
