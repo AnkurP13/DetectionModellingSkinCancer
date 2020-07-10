@@ -1,33 +1,33 @@
 package com.example.detectionmodellingskincancer;
 
 import android.content.Intent;
-import android.graphics.Bitmap;
 import android.os.Bundle;
-
-import com.google.android.material.bottomnavigation.BottomNavigationView;
+import android.view.MenuItem;
+import android.view.View;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
-import android.provider.MediaStore;
-import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
-import android.widget.ImageView;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.snackbar.Snackbar;
 
-public class Camera extends AppCompatActivity {
+public class Articles extends AppCompatActivity {
 
-    ImageView imageView2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_camera);
+        setContentView(R.layout.activity_articles);
+
+
+
 
         //intialize and assign variables
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
 
         //set camera selected page
-        bottomNavigationView.setSelectedItemId(R.id.Cam);
+        bottomNavigationView.setSelectedItemId(R.id.info);
 
         //perform itemselcetedListener
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -51,39 +51,5 @@ public class Camera extends AppCompatActivity {
             }
         });
 
-
-
-        Button btncam = (Button)(findViewById(R.id.btncam));
-        imageView2 = (ImageView)(findViewById(R.id.imageView2));
-
-
-        btncam.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-                startActivityForResult(intent, 0);
-
-            }
-        });
-
-
-    }
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        Bitmap bitmap = (Bitmap)data.getExtras().get("data");
-        imageView2.setImageBitmap(bitmap);
-    }
-
-
-    public void Location(View v){
-        Intent myIntent = new Intent(getBaseContext(),   MapsActivity.class);
-        startActivity(myIntent);
-    }
-
-    public void Info(View v){
-        Intent myIntent = new Intent(getBaseContext(),   Articles.class);
-        startActivity(myIntent);
     }
 }

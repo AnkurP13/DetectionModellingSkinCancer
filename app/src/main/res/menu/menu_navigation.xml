@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/map"
+        android:title="Google Maps"
+        android:icon="@drawable/mapicon"/>
+    <item
+        android:id="@+id/Cam"
+        android:title="Camera"
+        android:icon="@drawable/camera"/>
+    <item
+        android:id="@+id/Info"
+        android:title="Info"
+        android:icon="@drawable/cancericon"/>
+
+</menu>
