@@ -1,6 +1,7 @@
 package com.example.detectionmodellingskincancer;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -19,9 +20,6 @@ public class Articles extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_articles);
-
-
-
 
         //intialize and assign variables
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
@@ -51,5 +49,32 @@ public class Articles extends AppCompatActivity {
             }
         });
 
+
     }
+
+
+    public void skinvision(View view){
+        Intent skinIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://siliconcanals.com/news/skinvision-ai-app-skin-cancer-amsterdam-startup/"));
+        startActivity(skinIntent);
+
+    }
+
+    public void treatone(View view){
+        Intent t1intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.curetoday.com/publications/cure/2020/immunotherapy-2020/speaking-out-taking-action-against-skin-cancer"));
+        startActivity(t1intent);
+
+    }
+
+    public void treattwo(View view){
+        Intent t2intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.healtheuropa.eu/potential-new-treatment-for-skin-cancer-with-wearable-patch-development/100696/"));
+        startActivity(t2intent);
+
+    }
+    public void healthc(View view){
+        Intent healt = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.everydayhealth.com/cancer/skin-cancer/can-essential-oils-work-for-skin-cancer/"));
+        startActivity(healt);
+
+    }
+
+
 }

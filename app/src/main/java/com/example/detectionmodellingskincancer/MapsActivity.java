@@ -167,7 +167,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         markerOptions.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE));
         currentLocationmMarker = mMap.addMarker(markerOptions);
         mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
-        mMap.animateCamera(CameraUpdateFactory.zoomBy(10));
+        mMap.animateCamera(CameraUpdateFactory.zoomBy(5));
 
         if(client != null)
         {
@@ -217,10 +217,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
                 String hospital = "hospital";
                 String url = getUrl(latitude, longitude, hospital);
-                dataTransfer[0] = mMap;
-                dataTransfer[1] = url;
-
-                getNearbyPlacesData.execute(dataTransfer);
+                Object[] datatransfer = new Object[2];
+                datatransfer[0] = mMap;
+                datatransfer[1] = url;
+                getNearbyPlacesData.execute(datatransfer);
                 Toast.makeText(MapsActivity.this, "Showing Nearby Hospitals", Toast.LENGTH_SHORT).show();
                 break;
 
@@ -233,12 +233,15 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     private String getUrl(double latitude , double longitude , String nearbyPlace)
     {
-
+        //the search url for the nearby hospitals
         StringBuilder googlePlaceUrl = new StringBuilder("https://maps.googleapis.com/maps/api/place/nearbysearch/json?");
         googlePlaceUrl.append("location="+latitude+","+longitude);
+        //State the proximity Distance
         googlePlaceUrl.append("&radius="+PROXIMITY_RADIUS);
+        //Validate the search for hospital through nearby places
         googlePlaceUrl.append("&type="+nearbyPlace);
         googlePlaceUrl.append("&sensor=true");
+        //Assign API KEY
         googlePlaceUrl.append("&key="+"AIzaSyCDTI07wuVrGurMlHa9P6E3zTHf-BREw_4");
 
         Log.d("MapsActivity", "url = "+googlePlaceUrl.toString());
